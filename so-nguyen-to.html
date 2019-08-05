@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let number=parseInt(prompt("Nhập số số nguyên tố muốn được in ra:"));
+    let count=0;
+    let i = 0;
+    while (count<number) {
+        let result = loop(i) ;
+        if ( result == true) {
+            document.write(i);
+            document.write("</br>");
+            count++;
+        }
+        i++;
+    }
+    function loop(n) {
+        let total = true;
+        if ( n < 2) {
+            total = false;
+        } else {
+            for ( var i= 2; i < n-1 ; i++) {
+                if ( n % i == 0) {
+                    total =false; 
+                    break;
+                }
+            }
+        }
+              return total;
+    }
+    </script>
+</body>
+</html>
